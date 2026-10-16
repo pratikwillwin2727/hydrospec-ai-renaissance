@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300F5D4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='m10 15 5-3-5-3v6Z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HydroSpec AI — Zero-Chemical Optical & Micro-Fluidic Forensics | KJSSE Renaissance</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              obsidian: '#06080F',
+              cybercyan: '#00F5D4',
+              crimson: '#FF2A85',
+              neonamber: '#FFB703',
+              volt: '#FCEE09',
+              deepslate: '#0F172A',
+              cardbg: 'rgba(15, 23, 42, 0.75)',
+              hudborder: 'rgba(0, 245, 212, 0.25)',
+              hudcrimson: 'rgba(255, 42, 133, 0.25)',
+            },
+            fontFamily: {
+              mono: ['JetBrains Mono', 'monospace'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scanline': 'scanline 6s linear infinite',
+              'radar-sweep': 'radarSweep 3s linear infinite',
+              'glow-cyan': 'glowCyan 2s ease-in-out infinite alternate',
+              'glow-crimson': 'glowCrimson 1.5s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(1000%)' },
+              },
+              radarSweep: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+              glowCyan: {
+                '0%': { boxShadow: '0 0 10px rgba(0, 245, 212, 0.3)' },
+                '100%': { boxShadow: '0 0 25px rgba(0, 245, 212, 0.8), 0 0 50px rgba(0, 245, 212, 0.4)' },
+              },
+              glowCrimson: {
+                '0%': { boxShadow: '0 0 10px rgba(255, 42, 133, 0.3)' },
+                '100%': { boxShadow: '0 0 30px rgba(255, 42, 133, 0.9), 0 0 60px rgba(255, 42, 133, 0.5)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #06080F;
+        color: #E2E8F0;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      /* Custom Cyberpunk Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #06080F;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1E293B;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00F5D4;
+      }
+      .cyber-grid {
+        background-image: linear-gradient(rgba(0, 245, 212, 0.04) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(0, 245, 212, 0.04) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+      .hud-reticle-corner {
+        position: relative;
+      }
+      .hud-reticle-corner::before, .hud-reticle-corner::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        pointer-events: none;
+      }
+      .hud-reticle-corner::before {
+        top: -1px;
+        left: -1px;
+        border-top: 2px solid #00F5D4;
+        border-left: 2px solid #00F5D4;
+      }
+      .hud-reticle-corner::after {
+        bottom: -1px;
+        right: -1px;
+        border-bottom: 2px solid #00F5D4;
+        border-right: 2px solid #00F5D4;
+      }
+    </style>
+  </head>
+  <body class="bg-obsidian text-slate-100 min-h-screen antialiased selection:bg-cybercyan/30 selection:text-cybercyan">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

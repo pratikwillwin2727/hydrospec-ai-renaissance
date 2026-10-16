@@ -1,0 +1,41 @@
+/* Base animations and utilities */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 245, 212, 0.15);
+}
+
+.glass-panel-alert {
+  background: rgba(25, 10, 20, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 42, 133, 0.35);
+}
+
+.neon-border-cyan {
+  border-color: #00F5D4;
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.35);
+}
+
+.neon-border-crimson {
+  border-color: #FF2A85;
+  box-shadow: 0 0 20px rgba(255, 42, 133, 0.45);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+.text-glow-crimson {
+  text-shadow: 0 0 8px rgba(255, 42, 133, 0.7);
+}
