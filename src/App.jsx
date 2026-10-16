@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Tab2ExpiryForensics from './components/Tab2ExpiryForensics.jsx';
+import Tab3MumbaiArtMap from './components/Tab3MumbaiArtMap.jsx';
 import { 
   Droplets, 
   Camera, 
@@ -1045,22 +1046,13 @@ export default function App() {
         )}
 
 
+        {/* ======================================================== */}
+        {/* TAB 3: MUMBAI BIOLUMINESCENT SWARM MAP & FDA DOSSIER */}
+        {/* ======================================================== */}
         {activeTab === 'tab3' && (
-          <div className="p-8 rounded-xl border border-slate-800 bg-slate-950/80 text-center space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-full bg-crimson/10 border border-crimson/30 flex items-center justify-center">
-              <Radio className="w-6 h-6 text-crimson animate-pulse" />
-            </div>
-            <h3 className="font-mono text-lg font-bold text-white">
-              TAB 3: MUMBAI BIOLUMINESCENT SWARM MAP & FDA DOSSIER
-            </h3>
-            <p className="text-sm text-slate-300 max-w-lg mx-auto">
-              Living Generative Coral & Spore Network mapping Mumbai neighborhoods (Vidyavihar KJSSE, Ghatkopar, Dadar, Navi Mumbai) with 15-second FDA Rapid Raid Dispatch Dossier.
-            </p>
-            <div className="text-xs font-mono text-crimson bg-crimson/10 inline-block px-3 py-1 rounded border border-crimson/20">
-              ⚡ READY FOR STEP 3 ACTIVATION
-            </div>
-          </div>
+          <Tab3MumbaiArtMap />
         )}
+
 
       </main>
 
