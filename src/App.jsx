@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Tab2ExpiryForensics from './components/Tab2ExpiryForensics.jsx';
 import { 
   Droplets, 
   Camera, 
@@ -1037,22 +1038,12 @@ export default function App() {
         {/* ======================================================== */}
         {/* TAB 2 & TAB 3 PREVIEW SHELLS (Ready for Step 2 and Step 3) */}
         {/* ======================================================== */}
+        {/* TAB 2: DARK-STORE EXPIRY & FOIL FORENSICS */}
+        {/* ======================================================== */}
         {activeTab === 'tab2' && (
-          <div className="p-8 rounded-xl border border-slate-800 bg-slate-950/80 text-center space-y-4">
-            <div className="w-12 h-12 mx-auto rounded-full bg-neonamber/10 border border-neonamber/30 flex items-center justify-center">
-              <Scan className="w-6 h-6 text-neonamber animate-pulse" />
-            </div>
-            <h3 className="font-mono text-lg font-bold text-white">
-              TAB 2: DARK-STORE EXPIRY & FOIL FORENSICS
-            </h3>
-            <p className="text-sm text-slate-300 max-w-lg mx-auto">
-              Sobel 3×3 Edge Convolution & UV Solvent Smudge Heatmap engine for detecting re-stamped counterfeit medicines and wiped expiry dates.
-            </p>
-            <div className="text-xs font-mono text-neonamber bg-neonamber/10 inline-block px-3 py-1 rounded border border-neonamber/20">
-              ⚡ READY FOR STEP 2 ACTIVATION
-            </div>
-          </div>
+          <Tab2ExpiryForensics onEscalateToSwarm={(pkt) => setActiveTab('tab3')} />
         )}
+
 
         {activeTab === 'tab3' && (
           <div className="p-8 rounded-xl border border-slate-800 bg-slate-950/80 text-center space-y-4">
